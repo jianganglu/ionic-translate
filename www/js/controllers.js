@@ -1,10 +1,10 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $translate) {
+.controller('DashCtrl', function($scope, $translate, Chats) {
   $scope.switching = function(lang) {
     $translate.use(lang);
     window.localStorage.lang = lang;
-    window.location.reload();
+    // window.location.reload();
   }
 
   $scope.curLange = $translate.use();

@@ -1,6 +1,6 @@
 angular.module('starter.services', [])
 
-.factory('Chats', function() {
+.factory('Chats', function($translate) {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
@@ -45,6 +45,12 @@ angular.module('starter.services', [])
         }
       }
       return null;
+    },
+    T: function(key) {
+      if(key) {
+        return $translate.instant(key);
+      }
+      return key;
     }
   };
 });
