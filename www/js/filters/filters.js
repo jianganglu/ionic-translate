@@ -6,12 +6,6 @@
         }
         return key;
     }
-})
-.filter('map', function() {
-    var filter = function(input) {
-        return input + '...';
-    };
-    return filter;
 });
 
 
