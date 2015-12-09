@@ -33,6 +33,15 @@
           }
         }
       })
+        .state('tab.dash-directive', {
+          url: '/dash/directive',
+          views: {
+            'tab-dash': {
+              templateUrl: 'templates/dash-directive.html',
+              controller: 'DirectiveCtrl as vm'
+            }
+          }
+        })
 
       .state('tab.chats', {
           url: '/chats',
