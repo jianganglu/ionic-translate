@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $translate, Chats) {
+.controller('DashCtrl', function($scope, $translate, Chats, Services) {
   $scope.switching = function(lang) {
     $translate.use(lang);
     window.localStorage.lang = lang;
@@ -8,6 +8,8 @@ angular.module('starter.controllers', [])
   }
 
   $scope.curLange = $translate.use();
+
+  Services.addDesks();
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
