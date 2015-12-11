@@ -1,5 +1,12 @@
-<ion-view view-title="Account">
-  <ion-content>
+<ion-view view-title="Account" hide-nav-bar="true">
+  <ion-header-bar class="bar bar-header bar-balanced item-input-inset">
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="Search">
+    </label>
+    <button class="button button-clear">Cancel</button>
+  </ion-header-bar>
+  <ion-content scroll-content="false">
     <ion-list>
     <ion-toggle  ng-model="settings.enableFriends">
         Enable Friends

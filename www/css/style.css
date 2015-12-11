@@ -1,16 +1,46 @@
 /* Empty. Add your own CSS if you like */
 .expander {
-    border: 1px solid black;
-    width: 250px;
+  border: 1px solid black;
+  width: 250px;
 }
 
 .expander>.title {
-    background-color: black;
-    color: white;
-    padding: .1em .3em;
-    cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: .1em .3em;
+  cursor: pointer;
 }
 
 .expander>.body {
-    padding: .1em .3em;
+  padding: .1em .3em;
+}
+
+.item {
+  border-style: none;
+}
+
+.item:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  height: 1px;
+  width: 200%;
+  transform: scale(0.5);
+  left: -50%;
+  background-color: #ededed;
+}
+
+/* Work around issue with flickering while showing/hiding the nav bar */
+ion-nav-view ion-view:not([hide-nav-bar="true"]) ion-content {
+    top: 44px;
+}
+ion-nav-view ion-view[hide-nav-bar="true"] ion-content {
+    top: 44;
+}
+.platform-ios.platform-cordova:not(.fullscreen) ion-nav-view ion-view:not([hide-nav-bar="true"]) ion-content {
+    top: 64px;
+}
+.platform-ios.platform-cordova:not(.fullscreen) ion-nav-view ion-view[hide-nav-bar="true"] ion-content {
+    top: 22px;
 }
